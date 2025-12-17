@@ -4,22 +4,22 @@
     <meta charset="UTF-8" />
     <title>Redirecting...</title>
     <script>
-      // GitHub Pages SPA fallback
-      var segmentCount = 1; // 仓库名层级
-      var l = window.location;
-      var newPath =
-        l.protocol +
-        '//' +
-        l.host +
-        l.pathname
-          .split('/')
-          .slice(0, segmentCount + 1)
-          .join('/') +
-        '/?redirect=' +
-        encodeURIComponent(
-          l.pathname.replace(/^\/[^/]+/, '') + l.search + l.hash
-        );
-      window.location.replace(newPath);
+      (function () {
+        var l = window.location;
+
+        // 仓库名
+        var repo = '/mapv-three-showcases';
+
+        // 保留完整子路径
+        var redirect =
+          repo +
+          '/?redirect=' +
+          encodeURIComponent(
+            l.pathname.replace(repo, '') + l.search + l.hash
+          );
+
+        window.location.replace(l.origin + redirect);
+      })();
     </script>
   </head>
   <body></body>
