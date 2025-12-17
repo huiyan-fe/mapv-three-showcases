@@ -2,7 +2,9 @@
 
 基于 JSAPI Three 的地图可视化展示案例集合，展示了各种 3D 可视化效果、地理信息展示和特效动画等。
 
-线上地址：https://lbsyun.baidu.com/jsapithree/showcase/
+官方网站：https://lbsyun.baidu.com/jsapithree/showcase/
+
+Github Pages：https://huiyan-fe.github.io/mapv-three-showcases/
 
 ## 项目结构
 
@@ -40,8 +42,6 @@ src/
 ```bash
 # 安装依赖
 npm install
-# 或使用 pnpm
-pnpm install
 
 # 开发模式
 npm run dev

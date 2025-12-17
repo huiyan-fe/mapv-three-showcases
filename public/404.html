@@ -8,14 +8,14 @@
         var l = window.location;
 
         // 仓库名
-        var repo = '/mapv-three-showcases';
+        var github_repo = '/mapv-three-showcases';
 
         // 保留完整子路径
         var redirect =
-          repo +
-          '/?redirect=' +
+          github_repo +
+          '/?github_repo_redirect=' +
           encodeURIComponent(
-            l.pathname.replace(repo, '') + l.search + l.hash
+            l.pathname.replace(github_repo, '') + l.search + l.hash
           );
 
         window.location.replace(l.origin + redirect);

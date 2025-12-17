@@ -72,16 +72,12 @@
     <script>
       (function () {
         var params = new URLSearchParams(window.location.search);
-        var redirect = params.get('redirect');
+        var redirect = params.get('github_repo_redirect');
     
         if (redirect) {
-          var repo = '/mapv-three-showcases';
-          // 始终带上 repo 前缀
-          window.history.replaceState(
-            null,
-            '',
-            repo + redirect
-          );
+          var github_repo = '/mapv-three-showcases';
+          // 始终带上 github_repo 前缀
+          window.history.replaceState(null, '', github_repo + redirect);
         }
       })();
     </script>
