@@ -73,8 +73,15 @@
       (function () {
         var params = new URLSearchParams(window.location.search);
         var redirect = params.get('redirect');
+    
         if (redirect) {
-          window.history.replaceState(null, '', redirect);
+          var repo = '/mapv-three-showcases';
+          // 始终带上 repo 前缀
+          window.history.replaceState(
+            null,
+            '',
+            repo + redirect
+          );
         }
       })();
     </script>
