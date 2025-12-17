@@ -40,7 +40,7 @@ jobs:
           VITE_MAPBOX_ACCESS_TOKEN: ${{ secrets.VITE_MAPBOX_ACCESS_TOKEN }}
 
           # --- 非敏感配置，直接写 ---
-          VITE_PUBLIC_PATH: /jsapithree/showcase/
+          VITE_PUBLIC_PATH: /mapv-three-showcases/
           VITE_BOS_ASSETS_BASE_URL: https://jsapithree-showcase-data.bj.bcebos.com
           VITE_YONGCHUAN_OBLIQUE_TILESET: https://jsapithree-showcase-data.bj.bcebos.com/yongchuan_ob/tileset.json
         run: npm run build
