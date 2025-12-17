@@ -40,6 +40,8 @@ src/
 ```bash
 # 安装依赖
 npm install
+# 或使用 pnpm
+pnpm install
 
 # 开发模式
 npm run dev
