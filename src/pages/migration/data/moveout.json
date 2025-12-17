@@ -1,0 +1,122 @@
+[
+    {
+      "province_name": "河北省",
+      "value": 38.94
+    },
+    {
+      "province_name": "河南省",
+      "value": 9.73
+    },
+    {
+      "province_name": "山东省",
+      "value": 9.06
+    },
+    {
+      "province_name": "山西省",
+      "value": 6.06
+    },
+    {
+      "province_name": "天津市",
+      "value": 4.43
+    },
+    {
+      "province_name": "辽宁省",
+      "value": 3.42
+    },
+    {
+      "province_name": "安徽省",
+      "value": 2.61
+    },
+    {
+      "province_name": "江苏省",
+      "value": 2.37
+    },
+    {
+      "province_name": "内蒙古自治区",
+      "value": 2.32
+    },
+    {
+      "province_name": "黑龙江省",
+      "value": 2.25
+    },
+    {
+      "province_name": "湖北省",
+      "value": 2.05
+    },
+    {
+      "province_name": "陕西省",
+      "value": 1.91
+    },
+    {
+      "province_name": "广东省",
+      "value": 1.82
+    },
+    {
+      "province_name": "四川省",
+      "value": 1.55
+    },
+    {
+      "province_name": "吉林省",
+      "value": 1.5
+    },
+    {
+      "province_name": "浙江省",
+      "value": 1.45
+    },
+    {
+      "province_name": "湖南省",
+      "value": 1.31
+    },
+    {
+      "province_name": "江西省",
+      "value": 1.03
+    },
+    {
+      "province_name": "甘肃省",
+      "value": 1.01
+    },
+    {
+      "province_name": "福建省",
+      "value": 0.92
+    },
+    {
+      "province_name": "云南省",
+      "value": 0.67
+    },
+    {
+      "province_name": "海南省",
+      "value": 0.67
+    },
+    {
+      "province_name": "重庆市",
+      "value": 0.64
+    },
+    {
+      "province_name": "上海市",
+      "value": 0.6
+    },
+    {
+      "province_name": "广西壮族自治区",
+      "value": 0.55
+    },
+    {
+      "province_name": "贵州省",
+      "value": 0.31
+    },
+    {
+      "province_name": "新疆维吾尔自治区",
+      "value": 0.22
+    },
+    {
+      "province_name": "宁夏回族自治区",
+      "value": 0.2
+    },
+    {
+      "province_name": "青海省",
+      "value": 0.07
+    },
+    {
+      "province_name": "西藏自治区",
+      "value": 0.01
+    }
+]

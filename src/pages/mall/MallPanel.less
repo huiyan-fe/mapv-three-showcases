@@ -1,0 +1,140 @@
+.scenery-side-panel {
+    position: absolute;
+    top: 40px;
+    right: 24px;
+    bottom: 80px; /* 为查看源码按钮留出空间（按钮高度约32px + 24px间距 + 24px安全距离） */
+    width: 320px;
+    background: rgba(30, 34, 44, .82);
+    box-shadow: -2px 0 16px 4px rgba(0, 0, 0, .18);
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    padding: 20px 16px 16px 16px;
+    border-radius: 16px;
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    border: 1px solid rgba(80, 80, 100, .18);
+    transition: box-shadow .3s;
+}
+
+.scenery-side-panel:hover {
+    box-shadow: -4px 0 32px 8px rgba(0, 0, 0, .28);
+}
+
+.scenery-side-panel-btns {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.scenery-side-panel-btns button {
+    flex: 1;
+    padding: 8px 0;
+    border: none;
+    background: rgba(60, 65, 80, .7);
+    color: #cfd8dc;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background .2s, color .2s;
+}
+
+.scenery-side-panel-btns button.active {
+    background: linear-gradient(90deg, #fbc02d 0%, #ffe082 100%);
+    color: #fff;
+    box-shadow: 0 2px 8px #fbc02d44;
+}
+
+.scenery-side-panel-table {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.scenery-side-panel-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    background: transparent;
+    color: #e3eaf3;
+}
+
+.scenery-side-panel-table th,
+.scenery-side-panel-table td {
+    padding: 8px 6px;
+    text-align: left;
+    border-bottom: 1px solid rgba(80, 80, 100, .18);
+}
+
+.scenery-side-panel-table th {
+    background: rgba(40, 44, 60, .7);
+    font-weight: 600;
+    color: #fff;
+}
+
+.scenery-side-panel-table th:nth-child(2),
+.scenery-side-panel-table td:nth-child(2) {
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+    text-align: right;
+}
+
+.scenery-side-panel-table td:first-child {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+    cursor: pointer;
+}
+
+.scenery-side-panel-table tr:hover td {
+    background: rgba(25, 118, 210, .13);
+}
+
+.scenery-side-panel-table::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+}
+
+.scenery-side-panel-table::-webkit-scrollbar-thumb {
+    background: #374151;
+    border-radius: 3px;
+}
+
+.scenery-side-panel-table td {
+    font-size: 13px;
+    color: #b0bac9;
+}
+
+.park-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow:
+        0 2px 8px rgba(25, 118, 210, .25),
+        0 0 32px #43e97b99,
+        0 0 8px #38f9d799;
+    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border-radius: 12px;
+    padding: 12px 0 12px 18px;
+    margin-bottom: 18px;
+    position: relative;
+    z-index: 11;
+}
+
+.park-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 36px;
+    background: linear-gradient(180deg, #43e97b 0%, #38f9d7 100%);
+    border-radius: 4px;
+    box-shadow: 0 0 12px #43e97b88;
+}

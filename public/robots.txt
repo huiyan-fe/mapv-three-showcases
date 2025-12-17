@@ -1,0 +1,33 @@
+# robots.txt for JSAPI Three 案例
+# 允许所有搜索引擎爬取
+
+User-agent: *
+Allow: /
+
+# 禁止爬取资源文件夹（避免不必要的抓取）
+Disallow: /mapvthree/assets/
+Disallow: /external/Assets/
+Disallow: /ffmpeg/
+
+# 指向站点地图
+Sitemap: https://lbsyun.baidu.com/jsapithree/showcase/sitemap.xml
+
+# 主要搜索引擎
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: 360Spider
+Allow: /
+
+User-agent: Sogou web spider
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# 爬取频率（针对百度）
+Crawl-delay: 1
+

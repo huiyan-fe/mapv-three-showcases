@@ -1,0 +1,20 @@
+{
+  "name": "JSAPI Three 案例 - 地图可视化展示案例集",
+  "short_name": "JSAPI Three 案例",
+  "description": "基于JSAPI Three的3D地图可视化展示案例集合，包含倾斜摄影、人口迁徙、风场可视化、热力图、地铁线路图等丰富的地理数据可视化效果。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1890ff",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["maps", "visualization", "technology"],
+  "lang": "zh-CN"
+}
+

@@ -1,0 +1,106 @@
+#root {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.showcase {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: #222;
+}
+
+.mall-map-root {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.mall-map-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.mall-ui-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    pointer-events: auto;
+    background: rgba(30, 34, 44, .82);
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, .1);
+    padding: 18px 40px 14px 32px;
+    display: flex;
+    align-items: center;
+}
+
+.mall-panel {
+    position: relative;
+    top: 80px;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+.mall-nav-btn {
+    margin-right: 12px;
+    padding: 4px 16px;
+    border-radius: 6px;
+    border: none;
+    background: #2c2c2c;
+    color: #ffe082;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: none;
+    transition: all .2s;
+}
+
+.mall-nav-btn:last-child {
+    margin-right: 0;
+}
+
+.mall-nav-btn--active {
+    background: linear-gradient(90deg, #fbc02d, #ffe082);
+    color: #222;
+    font-weight: 700;
+    box-shadow: 0 2px 8px #fbc02d44;
+}
+
+.mall-nav-bar {
+    margin-left: 32px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.mall-title__text {
+    background: linear-gradient(90deg, #fbc02d 0%, #ffe082 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-shadow:
+        0 2px 8px rgba(251, 192, 45, .25),
+        0 0 32px #fbc02d99,
+        0 0 8px #ffe08299;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #374151;
+    border-radius: 3px;
+}

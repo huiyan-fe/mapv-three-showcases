@@ -1,0 +1,100 @@
+.subway-transfer-table-dark {
+    color: #fff;
+}
+
+.subway-transfer-table-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.subway-legend-table-dark {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+    background: transparent;
+    table-layout: fixed;
+}
+
+.subway-legend-table-dark thead {
+    position: sticky;
+    top: 0;
+    background: rgba(30, 32, 40, .98);
+    z-index: 2;
+}
+
+.subway-legend-table-dark tbody {
+    display: block;
+    overflow-y: auto;
+    max-height: 100%;
+    min-height: 0;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(120, 120, 140, .5) rgba(30, 32, 40, .2);
+}
+
+.subway-legend-table-dark tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.subway-legend-table-dark th,
+.subway-legend-table-dark td {
+    border: 1px solid rgba(255, 255, 255, .18);
+    padding: 6px 10px;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.subway-legend-table-dark th {
+    background: rgba(255, 255, 255, .08);
+    font-weight: bold;
+}
+
+/* 滚动条美化 */
+.subway-legend-table-dark tbody::-webkit-scrollbar {
+    width: 8px;
+    background: rgba(30, 32, 40, .1);
+}
+
+.subway-legend-table-dark tbody::-webkit-scrollbar-thumb {
+    background: rgba(120, 120, 140, .5);
+    border-radius: 6px;
+}
+
+.subway-legend-table-dark tbody::-webkit-scrollbar-thumb:hover {
+    background: rgba(120, 120, 140, .7);
+}
+
+.subway-legend-table-title {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    flex: 0 0 auto;
+}
+
+.subway-transfer-table-scroll {
+    flex: 1 1 0;
+    min-height: 0;
+    overflow-y: auto;
+
+    /* 滚动条美化 */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(120, 120, 140, .5) rgba(30, 32, 40, .2);
+}
+
+.subway-transfer-table-scroll::-webkit-scrollbar {
+    width: 8px;
+    background: rgba(30, 32, 40, .1);
+}
+
+.subway-transfer-table-scroll::-webkit-scrollbar-thumb {
+    background: rgba(120, 120, 140, .5);
+    border-radius: 6px;
+}
+
+.subway-transfer-table-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(120, 120, 140, .7);
+}

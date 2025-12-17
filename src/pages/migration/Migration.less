@@ -1,0 +1,132 @@
+.showcase-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+
+    h1 {
+        font-size: 24px;
+        color: #fff;
+    }
+
+    h3 {
+        font-size: 16px;
+        color: #fff;
+    }
+}
+
+.migration-sidebar {
+    position: absolute;
+    top: 60px;
+    right: 24px;
+    bottom: 80px; /* 为查看源码按钮留出空间（按钮高度约32px + 24px间距 + 24px安全距离） */
+    width: 320px;
+    background: rgba(30, 34, 44, .85);
+    box-shadow: -2px 0 16px 4px rgba(0, 0, 0, .18);
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    border-radius: 16px;
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    border: 1px solid rgba(80, 80, 100, .18);
+}
+
+.migration-tabs {
+    display: flex;
+    gap: 8px;
+    margin: 18px 18px 10px;
+}
+
+.migration-tabs .tab {
+    flex: 1;
+    padding: 8px 0;
+    border: none;
+    background: rgba(60, 65, 80, .7);
+    color: #cfd8dc;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: background .2s, color .2s;
+    user-select: none;
+}
+
+.migration-tabs .tab.active {
+    background: #4f8cff;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 2px 8px #4f8cff44;
+    border: 1.5px solid #4f8cff;
+}
+
+.migration-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px 20px 20px;
+}
+
+.migration-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(80, 80, 100, .13);
+    font-size: 15px;
+    color: #e3eaf3;
+}
+
+.migration-list-item .province {
+    font-weight: 500;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.migration-list-item .value {
+    color: #4f8cff;
+    font-weight: bold;
+    min-width: 48px;
+    text-align: right;
+}
+
+.migration-list-item:last-child {
+    border-bottom: none;
+}
+
+.migration-list-item:hover {
+    background: rgba(25, 118, 210, .1);
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #374151;
+    border-radius: 3px;
+}
+
+.migration-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #b7c6e0;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.migration-list-header .province {
+    font-weight: bold;
+}
+
+.migration-list-header .value {
+    min-width: 48px;
+    text-align: right;
+}

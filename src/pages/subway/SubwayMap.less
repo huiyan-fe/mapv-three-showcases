@@ -1,0 +1,117 @@
+.showcase-title {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    color: #fff;
+    z-index: 10;
+    font-size: 24px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+}
+
+.subway-root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+.subway-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 18px;
+    letter-spacing: 2px;
+}
+
+.subway-main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    height: 0;
+    min-height: 0;
+}
+
+.subway-sidebar {
+    width: 340px;
+    min-width: 260px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 24px 16px 24px 16px;
+    box-shadow: -2px 0 8px 0 rgba(0, 0, 0, .04);
+    overflow-y: auto;
+    gap: 32px;
+}
+
+.subway-root-full {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.showcase-full {
+    position: absolute;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+
+.subway-title-float {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    transform: none;
+    z-index: 10;
+    background: rgba(30, 32, 40, .65);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, .1);
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.subway-panels-vertical {
+    position: absolute;
+    top: 96px;
+    right: 24px;
+    bottom: 80px; /* 为查看源码按钮留出空间（按钮高度约32px + 24px间距 + 24px安全距离） */
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 24px;
+    min-height: 340px;
+}
+
+.subway-panel-dark {
+    width: 340px;
+    min-width: 260px;
+    max-width: 400px;
+    background: rgba(30, 32, 40, .92);
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 32px 0 rgba(0, 0, 0, .18);
+    padding: 24px 16px 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow-y: auto;
+}
+
+.subway-panel-dark:first-child {
+    flex: 1 1 0;
+    min-height: 0;
+    max-height: none;
+}
+
+.subway-panel-dark:last-child {
+    flex: 0 0 auto;
+    max-height: 300px;
+    min-height: 0;
+}
