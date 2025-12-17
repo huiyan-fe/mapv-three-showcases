@@ -109,38 +109,128 @@ git push origin feature/your-feature-name
 
 ### Showcase 开发规范
 
-添加新的 Showcase 时，请遵循以下规范：
+本项目采用了自动路由匹配机制和模块化的目录结构，添加新的 showcase 需要以下步骤：
 
-1. **目录结构**：
-   ```
-   src/pages/
-   └── your-showcase/
-       ├── index.jsx         # 入口文件（必须）
-       ├── YourShowcase.jsx  # 主组件（必须）
-       ├── YourShowcase.less # 样式文件（可选）
-       └── assets/           # 资源文件（可选）
-   ```
+#### 1. 创建展示组件目录结构
 
-2. **使用 withSourceCode HOC**：
-   ```jsx
-   import {withSourceCode} from '../../utils/withSourceCode';
-   
-   export default withSourceCode(YourShowcase);
-   ```
+每个showcase建议有自己独立的目录，包含所有相关文件（assets、README.md为可选）：
 
-3. **资源管理**：
-   - 静态资源放在 showcase 目录下的 `assets` 文件夹
-   - 确保在 `useEffect` 的清理函数中释放所有资源
+```
+src/pages/
+└── myshowcase/           # 新showcase目录 (全小写)
+    ├── index.jsx         # 入口文件（必须）
+    ├── MyShowcase.jsx    # 主组件实现（必须）
+    ├── MyShowcase.less   # 组件样式（可选）
+    ├── README.md         # 文档说明（可选）
+    └── assets/           # 相关资源目录（可选）
+        ├── data.json     # 可能的数据文件
+        └── image.png     # 图片、模型等静态资源
+```
 
-4. **在 showcases.js 中注册**：
-   ```js
-   {
-     title: '您的展示标题',
-     image: '缩略图 URL',
-     path: '/your-showcase',
-     category: '分类名称'
-   }
-   ```
+**重要提示**：静态资源建议放到各自showcase目录下的assets文件夹，避免全部堆在public下，便于维护。
+
+#### 2. 创建入口文件
+
+入口文件非常简单，只需导入并导出主组件：
+
+```jsx
+// src/pages/myshowcase/index.jsx
+import MyShowcase from './MyShowcase';
+export default MyShowcase;
+```
+
+#### 3. 创建主组件文件
+
+在showcase目录下创建主组件文件：
+
+```jsx
+// src/pages/myshowcase/MyShowcase.jsx
+import {useEffect, useRef} from 'react';
+import * as THREE from 'three';
+import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
+import {withSourceCode} from '../../utils/withSourceCode';
+import './MyShowcase.less'; // 对应的样式文件（可选）
+
+function MyShowcase() {
+  const containerRef = useRef(null);
+  
+  useEffect(() => {
+    // JSAPI Three 初始化和场景设置
+    if (!containerRef.current) return;
+    
+    const engine = new mapvthree.Engine(containerRef.current);
+    
+    // 添加您的 3D 内容
+    // ...
+    
+    // 清理函数
+    return () => {
+      // 资源释放
+    };
+  }, []);
+
+  return (
+    <div className="showcase" ref={containerRef}>
+      {/* 在这里添加其他 UI 元素 */}
+    </div>
+  );
+}
+
+// 使用 withSourceCode 高阶组件包装，提供源码查看和返回按钮功能
+export default withSourceCode(MyShowcase);
+```
+
+#### 4. 创建样式文件（可选）
+
+```less
+// src/pages/myshowcase/MyShowcase.less
+.showcase {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+```
+
+#### 5. 创建 README 文档（可选）
+
+为你的showcase创建说明文档，进行一些简要的说明。
+
+#### 6. 在数据文件中添加展示项
+
+打开 `src/data/showcases.js` 文件，添加新的展示项配置：
+
+```js
+export const showcases = [
+  // 已有的展示项...
+  {
+    title: '我的新展示', // 展示标题
+    image: 'https://picsum.photos/seed/mynew/300/200', // 展示缩略图
+    path: '/myshowcase', // 路径必须与目录名完全匹配（小写）
+    category: '特效动画' // 分类，可以使用已有分类或创建新分类
+  }
+];
+```
+
+#### 命名规则和重要说明
+
+1. **目录结构与命名**：
+   - 目录名使用小写，如：`myshowcase`
+   - 组件使用PascalCase(大驼峰)命名：`MyShowcase.jsx`
+   - 数据文件中的path对应目录名：`/myshowcase`
+   - **重要**：路由、目录名和源码链接会自动保持一致
+
+2. **自动路由生成**：
+   - 系统会自动扫描 `pages` 目录下的每个子目录中的 `index.jsx` 文件
+   - 根据目录名自动生成路由，无需手动修改 `App.jsx`
+
+3. **自动源码链接**：
+   - `withSourceCode` 高阶组件会自动从当前URL路径提取showcase名称
+   - 源码查看按钮将链接到对应的GitHub仓库目录
+
+4. **资源管理**：
+   - 所有相关资源（图片、数据、模型等）建议放在showcase目录下的assets文件夹中
+   - 资源清理很重要，确保在 `useEffect` 的返回函数中释放所有资源
 
 ## Pull Request 审查流程
 
