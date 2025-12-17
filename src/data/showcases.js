@@ -7,13 +7,6 @@ export const showcases = [
         tags: ['三维地球', '城市', '实景'],
     },
     {
-        title: '景区登山图',
-        image: './thumbnails/park.webp',
-        path: '/park',
-        category: '三维地图与模型',
-        tags: ['三维地球', '景区', '实景'],
-    },
-    {
         title: '卫星运行轨迹',
         image: './thumbnails/satellite.webp',
         path: '/satellite',
