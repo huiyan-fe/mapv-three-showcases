@@ -1,80 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Primary Meta Tags -->
-    <title>JSAPI Three 案例 - 地图可视化展示案例集 | MapV Three</title>
-    <meta name="title" content="JSAPI Three 案例 - 地图可视化展示案例集 | MapV Three" />
-    <meta name="description" content="基于JSAPI Three的3D地图可视化展示案例集合，包含倾斜摄影、人口迁徙、风场可视化、热力图、地铁线路图等丰富的地理数据可视化效果。适用于智慧城市、数据可视化、GIS应用开发。" />
-    <meta name="keywords" content="JSAPI Three,MapV Three,地图可视化,3D可视化,地理数据可视化,倾斜摄影,人口迁徙,风场可视化,热力图,WebGL,Three.js,GIS,智慧城市,数据可视化" />
-    <meta name="author" content="百度地图开放平台" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://lbsyun.baidu.com/jsapithree/showcase/" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://lbsyun.baidu.com/jsapithree/showcase/" />
-    <meta property="og:title" content="JSAPI Three 案例 - 地图可视化展示案例集 | MapV Three" />
-    <meta property="og:description" content="基于JSAPI Three的3D地图可视化展示案例集合，包含倾斜摄影、人口迁徙、风场可视化、热力图、地铁线路图等丰富的地理数据可视化效果。" />
-    <meta property="og:image" content="https://lbsyun.baidu.com/jsapithree/showcase/thumbnails/cityPhotogrammetry.webp" />
-    <meta property="og:locale" content="zh_CN" />
-    <meta property="og:site_name" content="JSAPI Three 案例" />
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://lbsyun.baidu.com/jsapithree/showcase/" />
-    <meta name="twitter:title" content="JSAPI Three 案例 - 地图可视化展示案例集 | MapV Three" />
-    <meta name="twitter:description" content="基于JSAPI Three的3D地图可视化展示案例集合，包含倾斜摄影、人口迁徙、风场可视化、热力图、地铁线路图等丰富的地理数据可视化效果。" />
-    <meta name="twitter:image" content="https://lbsyun.baidu.com/jsapithree/showcase/thumbnails/cityPhotogrammetry.webp" />
-    
-    <!-- 移动端适配 -->
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="MapV Three 案例" />
-    
-    <!-- 主题颜色 -->
-    <meta name="theme-color" content="#1890ff" />
-    
-    <!-- JSON-LD 结构化数据 -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "JSAPI Three 案例",
-      "description": "基于JSAPI Three的3D地图可视化展示案例集合，包含倾斜摄影、人口迁徙、风场可视化、热力图、地铁线路图等丰富的地理数据可视化效果。",
-      "url": "https://lbsyun.baidu.com/jsapithree/showcase/",
-      "applicationCategory": "MultimediaApplication",
-      "operatingSystem": "Web Browser",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "CNY"
-      },
-      "creator": {
-        "@type": "Organization",
-        "name": "百度地图开放平台",
-        "url": "https://lbsyun.baidu.com/"
-      },
-      "keywords": "JSAPI Three, MapV Three, 地图可视化, 3D可视化, 地理数据可视化",
-      "inLanguage": "zh-CN",
-      "potentialAction": {
-        "@type": "ViewAction",
-        "target": "https://lbsyun.baidu.com/jsapithree/showcase/"
-      }
-    }
-    </script>
-    
+    <title>Redirecting...</title>
     <script>
-      window.MAPV_BASE_URL = 'mapvthree/';   // 配置为mapv-three包路径的dist目录
+      // GitHub Pages SPA fallback
+      var segmentCount = 1; // 仓库名层级
+      var l = window.location;
+      var newPath =
+        l.protocol +
+        '//' +
+        l.host +
+        l.pathname
+          .split('/')
+          .slice(0, segmentCount + 1)
+          .join('/') +
+        '/?redirect=' +
+        encodeURIComponent(
+          l.pathname.replace(/^\/[^/]+/, '') + l.search + l.hash
+        );
+      window.location.replace(newPath);
     </script>
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+  <body></body>
 </html>

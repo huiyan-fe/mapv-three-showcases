@@ -68,6 +68,16 @@
       }
     }
     </script>
+
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var redirect = params.get('redirect');
+        if (redirect) {
+          window.history.replaceState(null, '', redirect);
+        }
+      })();
+    </script>
     
     <script>
       window.MAPV_BASE_URL = 'mapvthree/';   // 配置为mapv-three包路径的dist目录
