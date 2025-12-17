@@ -1,4 +1,4 @@
-# JSAPI Three Showcases
+# MapV Three Showcases
 
 基于 JSAPI Three 的地图可视化展示案例集合，展示了各种 3D 可视化效果、地理信息展示和特效动画等。
 
