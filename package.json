@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^6.0.0",
-    "@baidumap/mapv-three": "^1.4.1",
+    "@baidumap/mapv-three": "^1.5.0",
     "@ffmpeg/core": "^0.12.10",
     "@ffmpeg/ffmpeg": "^0.12.15",
     "@ffmpeg/util": "^0.12.2",

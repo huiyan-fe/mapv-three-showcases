@@ -1,0 +1,111 @@
+.path-tool {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .banner {
+        border-radius: 0;
+        border-bottom: 1px solid #d9d9d9;
+
+        .banner-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+        }
+
+        .title {
+            margin: 0;
+            display: flex;
+            align-items: center;
+
+            .icon {
+                margin-right: 8px;
+                color: #1890ff;
+            }
+        }
+
+        .controls {
+            .record-btn {
+                margin-right: 12px;
+            }
+        }
+    }
+
+    .main-content {
+        flex: 1;
+        display: flex;
+        min-height: 0;
+
+        .panel {
+            width: 350px;
+            border-radius: 0;
+            border-right: 1px solid #d9d9d9;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            .panel-section {
+                padding: 16px;
+                border-bottom: 1px solid #f0f0f0;
+
+                .section-title {
+                    margin-bottom: 16px;
+                    display: flex;
+                    align-items: center;
+
+                    .section-icon {
+                        margin-right: 8px;
+                    }
+                }
+            }
+
+            .path-list {
+                max-height: 200px;
+                overflow: auto;
+
+                .path-item {
+                    padding: 8px 0;
+                    font-size: 12px;
+                }
+
+                .more-items {
+                    text-align: center;
+                    padding: 8px 0;
+                    font-size: 12px;
+                    color: #999;
+                }
+            }
+        }
+
+        .map-container {
+            flex: 1;
+            position: relative;
+        }
+    }
+}
+
+.recording {
+    .record-indicator {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background-color: #ff4d4f;
+        border-radius: 50%;
+        margin-right: 8px;
+        animation: blink 1s infinite;
+    }
+}
+
+@keyframes blink {
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: .3;
+    }
+}
