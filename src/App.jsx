@@ -1,5 +1,5 @@
 import {BrowserRouter as Router, Routes, Route, useLocation} from 'react-router-dom';
-import {Layout, Menu, Input, Typography} from 'antd';
+import {Layout, Menu, Input, Typography, Tooltip} from 'antd';
 import {
     SearchOutlined,
     EnvironmentOutlined,
@@ -7,6 +7,9 @@ import {
     BuildOutlined,
     ToolOutlined,
     PictureOutlined,
+    GithubOutlined,
+    QuestionCircleOutlined,
+    HomeOutlined,
 } from '@ant-design/icons';
 import {useState, useMemo, useRef, lazy, Suspense, useEffect} from 'react';
 import {showcases} from './data/showcases';
@@ -152,6 +155,38 @@ const ShowcaseList = () => {
                             scrollToCategory(key);
                         }}
                     />
+                    <div className="sidebar-footer">
+                        <Tooltip title="官网" placement="top">
+                            <a
+                                href="https://lbsyun.baidu.com/faq/api?title=jsapithree"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="footer-link"
+                            >
+                                <HomeOutlined />
+                            </a>
+                        </Tooltip>
+                        <Tooltip title="GitHub" placement="top">
+                            <a
+                                href="https://github.com/huiyan-fe/mapv-three-showcases"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="footer-link"
+                            >
+                                <GithubOutlined />
+                            </a>
+                        </Tooltip>
+                        <Tooltip title="提问与讨论" placement="top">
+                            <a
+                                href="https://github.com/huiyan-fe/mapv-three-showcases/issues"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="footer-link"
+                            >
+                                <QuestionCircleOutlined />
+                            </a>
+                        </Tooltip>
+                    </div>
                 </div>
                 <div className="main-content">
                     {Object.keys(filteredShowcases).length > 0 ? (
