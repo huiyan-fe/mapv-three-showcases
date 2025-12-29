@@ -41,6 +41,7 @@ jobs:
 
           # --- 非敏感配置，直接写 ---
           VITE_PUBLIC_PATH: /mapv-three-showcases/
+          VITE_TONGJI_KEY: ${{ secrets.VITE_TONGJI_KEY }}
           VITE_BOS_ASSETS_BASE_URL: https://jsapithree-showcase-data.bj.bcebos.com
           VITE_YONGCHUAN_OBLIQUE_TILESET: https://jsapithree-showcase-data.bj.bcebos.com/yongchuan_ob/tileset.json
           VITE_YIZHUANG_HDROAD_TILESET: https://jsapithree-showcase-data.bj.bcebos.com/yizhuang/tileset.json

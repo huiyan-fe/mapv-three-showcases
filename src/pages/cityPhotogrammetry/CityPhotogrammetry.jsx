@@ -3,6 +3,9 @@ import {withSourceCode} from '../../utils/withSourceCode';
 import * as mapvthree from '@baidumap/mapv-three';
 import * as THREE from 'three';
 
+// 配置 Cesium accessToken
+mapvthree.CesiumConfig.accessToken = import.meta.env.VITE_CESIUM_ACCESS_TOKEN;
+
 function CityPhotogrammetry() {
     const containerRef = useRef(null);
 

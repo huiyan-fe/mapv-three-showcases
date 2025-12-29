@@ -8,6 +8,9 @@ import {getCenterByCityName} from './cityCenter';
 import './Migration.less';
 import {setMapStyle} from '../../utils/setMapStyle';
 
+// 配置百度地图 AK
+mapvthree.BaiduMapConfig.ak = import.meta.env.VITE_BAIDU_MAP_AK;
+
 let engine;
 let line;
 let flyline;
@@ -52,6 +55,7 @@ function Migration() {
                 },
             },
         });
+
 
         const mapView = engine.add(new mapvthree.MapView({
             terrainProvider: null,

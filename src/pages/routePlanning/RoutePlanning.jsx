@@ -12,6 +12,10 @@ import {
     FullscreenOutlined,
 } from '@ant-design/icons';
 
+
+// 配置百度地图 AK
+mapvthree.BaiduMapConfig.ak = import.meta.env.VITE_BAIDU_MAP_AK;
+
 const {Title, Text} = Typography;
 
 const transportModes = [
@@ -126,6 +130,7 @@ function RoutePlanning() {
             });
 
             engineRef.current = engine;
+
 
             // 添加地图图层
             engine.add(new mapvthree.MapView({

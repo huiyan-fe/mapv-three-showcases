@@ -6,6 +6,9 @@ import {Checkbox, Slider, Select, Divider, Button, Popconfirm, message} from 'an
 import {withSourceCode} from '../../utils/withSourceCode';
 import {PlusOutlined, DeleteOutlined} from '@ant-design/icons';
 
+// 配置百度地图 AK
+mapvthree.BaiduMapConfig.ak = import.meta.env.VITE_BAIDU_MAP_AK;
+
 const {Option} = Select;
 
 const LAYER_TYPES = {

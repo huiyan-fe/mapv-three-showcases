@@ -8,6 +8,9 @@ import startPng from './assets/start.png';
 import scenicPng from './assets/scenic.png';
 import manAnimateGlb from './assets/man_animate.glb';
 
+// 配置 Cesium accessToken
+mapvthree.CesiumConfig.accessToken = import.meta.env.VITE_CESIUM_ACCESS_TOKEN;
+
 const {Title} = Typography;
 
 const routes = Array.from({length: routeList.length}, (_, i) => ({

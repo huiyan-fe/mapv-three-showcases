@@ -17,6 +17,10 @@ const MODULES = [
     {key: 'facility', label: '周边设施', component: FacilityModule},
 ];
 
+
+// 配置百度地图 AK
+mapvthree.BaiduMapConfig.ak = import.meta.env.VITE_BAIDU_MAP_AK;
+
 /**
  * MallMap 只渲染空地图，后续各业务模块通过模块化方式挂载
  */
@@ -73,6 +77,7 @@ function MallMap() {
             },
         });
         engineRef.current = engine;
+
         const mapView = engine.add(new mapvthree.MapView({
             terrainProvider: null,
             vectorProvider: new mapvthree.BaiduVectorTileProvider(),

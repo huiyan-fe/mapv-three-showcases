@@ -12,6 +12,10 @@ import SubwayTransferTable from './SubwayTransferTable';
 import icon1 from './assets/icons/split_1_1.png';
 import icon2 from './assets/icons/split_1_2.png';
 
+
+// 配置百度地图 AK
+mapvthree.BaiduMapConfig.ak = import.meta.env.VITE_BAIDU_MAP_AK;
+
 function SubwayTitle() {
     return (
         <div className="subway-title subway-title-float" style={{display: 'flex', alignItems: 'center'}}>

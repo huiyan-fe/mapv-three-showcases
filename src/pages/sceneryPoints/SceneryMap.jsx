@@ -24,6 +24,10 @@ import icon43 from './assets/icons/split_4_3.png';
 import icon44 from './assets/icons/split_4_4.png';
 import SceneryPanel from './SceneryPanel';
 
+
+// 配置百度地图 AK
+mapvthree.BaiduMapConfig.ak = import.meta.env.VITE_BAIDU_MAP_AK;
+
 const textIds = [
     'w33616744', // 奥林匹克森林公园
     'w14549539', // 奥林匹克公园
@@ -67,6 +71,7 @@ function SceneryMap() {
             },
         });
         engineRef.current = engine;
+
 
         const mapView = engine.add(new mapvthree.MapView({
             terrainProvider: null,

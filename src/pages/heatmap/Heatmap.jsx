@@ -1,10 +1,13 @@
 import {useEffect, useRef, useState} from 'react';
 import {withSourceCode} from '../../utils/withSourceCode';
-import * as THREE from 'three';
+// import * as THREE from 'three';
 import * as mapvthree from '@baidumap/mapv-three';
 import {setMapStyle} from '../../utils/setMapStyle';
 import './Heatmap.less';
 import mockData from './mock.json';
+
+// 配置百度地图 AK
+mapvthree.BaiduMapConfig.ak = import.meta.env.VITE_BAIDU_MAP_AK;
 
 let engine;
 let dataSource;

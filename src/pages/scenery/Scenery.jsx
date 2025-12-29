@@ -11,6 +11,9 @@ import {
     AppstoreOutlined,
 } from '@ant-design/icons';
 
+// 配置百度地图 AK
+mapvthree.BaiduMapConfig.ak = import.meta.env.VITE_BAIDU_MAP_AK;
+
 const {Title, Text} = Typography;
 const {Option} = Select;
 

@@ -6,6 +6,8 @@ import {setMapStyle} from '../../utils/setMapStyle';
 import originData from './result.txt';
 import './MassivePoints.less';
 
+// 配置百度地图 AK
+mapvthree.BaiduMapConfig.ak = import.meta.env.VITE_BAIDU_MAP_AK;
 let engine;
 
 function MassivePoints() {
