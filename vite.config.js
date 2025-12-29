@@ -38,7 +38,7 @@ export default defineConfig(({command, mode}) => {
             }),
             // 自动生成sitemap.xml（仅在构建时）
             sitemapPlugin({
-                hostname: 'https://lbsyun.baidu.com/jsapithree/showcase',
+                hostname: 'https://lbsyun.baidu.com/mapv-three-showcases',
                 showcasesPath: '../src/data/showcases.js',
                 outputPath: 'sitemap.xml',
             }),

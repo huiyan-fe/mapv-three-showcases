@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename);
 
 export default function viteSitemapPlugin(options = {}) {
     const {
-        hostname = 'https://lbsyun.baidu.com/jsapithree/showcase',
+        hostname = 'https://lbsyun.baidu.com/mapv-three-showcases',
         showcasesPath = '../src/data/showcases.js',
         outputPath = 'sitemap.xml',
     } = options;
