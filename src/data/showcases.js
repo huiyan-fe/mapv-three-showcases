@@ -124,6 +124,13 @@ export const showcases = [
         category: '工具平台',
         tags: ['量测', '工具'],
     },
+    {
+        title: '孪生车流可视化',
+        image: './thumbnails/twin.webp',
+        path: '/twin',
+        category: '孪生车流',
+        tags: ['三维地球', '车流', '孪生', '交通'],
+    },
     // {
     //     title: '示例视频',
     //     image: 'https://picsum.photos/seed/demo/300/200',

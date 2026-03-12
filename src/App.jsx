@@ -7,6 +7,7 @@ import {
     BuildOutlined,
     ToolOutlined,
     PictureOutlined,
+    CarOutlined,
     GithubOutlined,
     QuestionCircleOutlined,
     HomeOutlined,
@@ -84,6 +85,8 @@ const getCategoryIcon = category => {
             return <ToolOutlined />;
         case '地图':
             return <PictureOutlined />;
+        case '孪生车流':
+            return <CarOutlined />;
         default:
             return <EnvironmentOutlined />;
     }

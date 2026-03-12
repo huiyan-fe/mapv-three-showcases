@@ -1,0 +1,327 @@
+.showcase {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.map-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ui-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.twin-header,
+.config-panel {
+    pointer-events: auto;
+}
+
+.twin-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, .6) 0%,
+            rgba(0, 0, 0, .3) 60%,
+            rgba(0, 0, 0, 0) 100%
+        );
+}
+
+.twin-title {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, .5);
+    letter-spacing: 1px;
+}
+
+.control-panel {
+    display: flex;
+    gap: 12px;
+}
+
+.control-btn {
+    padding: 8px 20px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    background: rgba(255, 255, 255, .1);
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    backdrop-filter: blur(20px);
+    transition: all .2s ease;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .1);
+}
+
+.control-btn:hover {
+    background: rgba(255, 255, 255, .18);
+    transform: translateY(-1px);
+}
+
+.control-btn.active {
+    background: rgba(59, 130, 246, .3);
+    border-color: rgba(59, 130, 246, .5);
+}
+
+/* 配置面板 */
+.config-panel {
+    position: absolute;
+    top: 110px;
+    left: 16px;
+    width: 260px;
+    background: rgba(10, 15, 28, .85);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 12px;
+    overflow: hidden;
+    max-height: calc(100vh - 180px);
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    color: rgba(255, 255, 255, .9);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    user-select: none;
+}
+
+.panel-toggle:hover {
+    background: rgba(255, 255, 255, .05);
+}
+
+.panel-toggle-icon {
+    font-size: 12px;
+    color: rgba(255, 255, 255, .5);
+}
+
+.panel-content {
+    overflow-y: auto;
+    padding-bottom: 8px;
+}
+
+.panel-content::-webkit-scrollbar {
+    width: 4px;
+}
+
+.panel-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, .15);
+    border-radius: 2px;
+}
+
+.panel-section {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, .06);
+}
+
+.panel-section:last-child {
+    border-bottom: none;
+}
+
+.section-title {
+    color: rgba(255, 255, 255, .5);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+}
+
+.info-label {
+    color: rgba(255, 255, 255, .6);
+    font-size: 12px;
+}
+
+.info-value {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* 颜色选择 */
+.color-picker-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.color-picker {
+    width: 36px;
+    height: 28px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 6px;
+    background: transparent;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.color-picker::-webkit-color-swatch-wrapper {
+    padding: 2px;
+}
+
+.color-picker::-webkit-color-swatch {
+    border: none;
+    border-radius: 4px;
+}
+
+/* 标签下拉 */
+.label-select {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid rgba(255, 255, 255, .15);
+    background: rgba(255, 255, 255, .08);
+    color: rgba(255, 255, 255, .85);
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='rgba(255,255,255,0.5)' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.label-select:hover {
+    border-color: rgba(59, 130, 246, .4);
+}
+
+.label-select option {
+    background: #1a1f2e;
+    color: #fff;
+}
+
+.color-value {
+    color: rgba(255, 255, 255, .6);
+    font-size: 12px;
+    font-family: monospace;
+}
+
+/* 开关 */
+.toggle-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    cursor: pointer;
+    color: rgba(255, 255, 255, .8);
+    font-size: 13px;
+}
+
+.toggle-row input[type="checkbox"] {
+    display: none;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 36px;
+    height: 20px;
+    background: rgba(255, 255, 255, .15);
+    border-radius: 10px;
+    transition: background .2s ease;
+}
+
+.toggle-switch::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform .2s ease;
+}
+
+.toggle-row input:checked + .toggle-switch {
+    background: rgba(59, 130, 246, .6);
+}
+
+.toggle-row input:checked + .toggle-switch::after {
+    transform: translateX(16px);
+}
+
+/* 追踪按钮 */
+.track-actions {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.track-btn {
+    flex: 1;
+    padding: 6px 0;
+    border: 1px solid rgba(255, 255, 255, .15);
+    background: rgba(255, 255, 255, .08);
+    color: rgba(255, 255, 255, .8);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all .2s ease;
+}
+
+.track-btn:hover:not(:disabled) {
+    background: rgba(59, 130, 246, .2);
+    border-color: rgba(59, 130, 246, .4);
+}
+
+.track-btn:disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+.track-btn.active {
+    background: rgba(59, 130, 246, .3);
+    border-color: rgba(59, 130, 246, .5);
+    color: #fff;
+}
+
+.selected-car-info {
+    background: rgba(255, 255, 255, .05);
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+.track-hint {
+    color: rgba(255, 255, 255, .35);
+    font-size: 12px;
+    text-align: center;
+    padding: 8px 0;
+}
