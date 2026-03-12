@@ -21,6 +21,13 @@ export const showcases = [
         tags: ['三维地球', '景区', '实景'],
     },
     {
+        title: '三维车流数据可视化',
+        image: './thumbnails/twin.webp',
+        path: '/twin',
+        category: '三维地图与模型',
+        tags: ['三维地球', '车流', '孪生', '交通'],
+    },
+    {
         title: '卫星运行轨迹',
         image: './thumbnails/satellite.webp',
         path: '/satellite',
@@ -123,13 +130,6 @@ export const showcases = [
         path: '/measure',
         category: '工具平台',
         tags: ['量测', '工具'],
-    },
-    {
-        title: '孪生车流可视化',
-        image: './thumbnails/twin.webp',
-        path: '/twin',
-        category: '孪生车流',
-        tags: ['三维地球', '车流', '孪生', '交通'],
     },
     // {
     //     title: '示例视频',

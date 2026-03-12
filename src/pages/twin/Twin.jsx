@@ -1,18 +1,18 @@
 import {useEffect, useRef, useState, useCallback} from 'react';
 import {withSourceCode} from '../../utils/withSourceCode';
 import * as mapvthree from '@baidumap/mapv-three';
-import twinData from '../data/twin.json';
+import twinData from './data/twin.json';
 import './Twin.less';
 
 mapvthree.BaiduMapConfig.ak = import.meta.env.VITE_BAIDU_MAP_AK;
 
 const COLOR_PRESETS = {
-    white: {label: '白色', value: mapvthree.Twin.REALISTIC_TEMPLATE_COLOR.white},
-    black: {label: '黑色', value: mapvthree.Twin.REALISTIC_TEMPLATE_COLOR.black},
-    gray: {label: '灰色', value: mapvthree.Twin.REALISTIC_TEMPLATE_COLOR.gray},
-    blue: {label: '蓝色', value: mapvthree.Twin.REALISTIC_TEMPLATE_COLOR.blue},
-    red: {label: '红色', value: mapvthree.Twin.REALISTIC_TEMPLATE_COLOR.red},
-    yellow: {label: '黄色', value: mapvthree.Twin.REALISTIC_TEMPLATE_COLOR.yellow},
+    white: {label: '白色', value: mapvthree.twinConstants.REALISTIC_TEMPLATE_COLOR.white},
+    black: {label: '黑色', value: mapvthree.twinConstants.REALISTIC_TEMPLATE_COLOR.black},
+    gray: {label: '灰色', value: mapvthree.twinConstants.REALISTIC_TEMPLATE_COLOR.gray},
+    blue: {label: '蓝色', value: mapvthree.twinConstants.REALISTIC_TEMPLATE_COLOR.blue},
+    red: {label: '红色', value: mapvthree.twinConstants.REALISTIC_TEMPLATE_COLOR.red},
+    yellow: {label: '黄色', value: mapvthree.twinConstants.REALISTIC_TEMPLATE_COLOR.yellow},
 };
 
 const MODEL_TYPES = {
@@ -151,8 +151,8 @@ function Twin() {
             delay: 1000,
             keepSize: true,
             modelConfig: {
-                2: mapvthree.Twin.REALISTIC_TEMPLATE_MODEL.CAR,
-                3: mapvthree.Twin.REALISTIC_TEMPLATE_MODEL.TRUCK,
+                2: mapvthree.twinConstants.REALISTIC_TEMPLATE_MODEL.CAR,
+                3: mapvthree.twinConstants.REALISTIC_TEMPLATE_MODEL.TRUCK,
             },
             objects: [label],
             objectAttributes: {text: 'plateText'},
