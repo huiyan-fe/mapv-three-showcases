@@ -2,7 +2,7 @@
 
 基于 3D地图 JSAPI（原 JSAPI Three）的地图可视化展示案例集合，展示了各种 3D 可视化效果、地理信息展示和特效动画等。
 
-官方网站：https://lbsyun.baidu.com/jsapithree/showcase/
+官方网站：https://lbs.baidu.com/jsapithree/showcase/
 
 Github Pages：https://huiyan-fe.github.io/mapv-three-showcases/
 
@@ -28,7 +28,7 @@ src/
 
 2. **填写环境变量**：
    打开 `.env` 文件，根据你的开发环境填写相应的变量值，例如：
-   - `VITE_BAIDU_MAP_AK`: 百度地图 API Key，需要到百度地图开放平台申请，https://lbsyun.baidu.com/apiconsole/key
+   - `VITE_BAIDU_MAP_AK`: 百度地图 API Key，需要到百度地图开放平台申请，https://lbs.baidu.com/apiconsole/key
    - `VITE_CESIUM_ACCESS_TOKEN`: Cesium Access Token，需要到Cesium官网申请，https://ion.cesium.com/tokens
    - `VITE_MAPBOX_ACCESS_TOKEN`: Mapbox Access Token，需要到Mapbox官网申请，https://console.mapbox.com/account/access-tokens/
    - `VITE_PUBLIC_PATH`: 公共资源路径

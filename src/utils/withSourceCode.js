@@ -2,6 +2,7 @@ import React, {memo, useEffect, useState} from 'react';
 import {useLocation} from 'react-router-dom';
 import CodeViewer from '../components/CodeViewer';
 import {showcases} from '../data/showcases';
+import {updateCanonical} from './seo';
 
 // Base GitHub repository URL
 const BASE_GITHUB_URL = 'https://github.com/huiyan-fe/mapv-three-showcases/tree/main/src/pages/';
@@ -23,6 +24,7 @@ export const withSourceCode = WrappedComponent => {
                 // 如果没有找到对应的showcase，使用组件名称
                 document.title = `${WrappedComponent.name} - 3D地图 JSAPI 案例 | MapV Three`;
             }
+            updateCanonical(location.pathname);
 
             // 构建GitHub链接
             if (location.pathname !== '/') {

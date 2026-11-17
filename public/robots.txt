@@ -10,7 +10,7 @@ Disallow: /external/Assets/
 Disallow: /ffmpeg/
 
 # 指向站点地图
-Sitemap: https://lbsyun.baidu.com/mapv-three-showcases/sitemap.xml
+Sitemap: https://lbs.baidu.com/jsapithree/showcase/sitemap.xml
 
 # 主要搜索引擎
 User-agent: Baiduspider

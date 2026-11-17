@@ -14,6 +14,7 @@ import {
 } from '@ant-design/icons';
 import {useState, useMemo, useRef, lazy, Suspense, useEffect} from 'react';
 import {showcases} from './data/showcases';
+import {updateCanonical} from './utils/seo';
 import ShowcaseCard from './components/ShowcaseCard';
 import './App.less';
 
@@ -99,6 +100,7 @@ const ShowcaseList = () => {
     // 设置首页title
     useEffect(() => {
         document.title = '3D地图 JSAPI 案例 - 地图可视化展示案例集 | MapV Three';
+        updateCanonical('/');
     }, []);
 
     const filteredShowcases = useMemo(() => {
@@ -161,7 +163,7 @@ const ShowcaseList = () => {
                     <div className="sidebar-footer">
                         <Tooltip title="官网" placement="top">
                             <a
-                                href="https://lbsyun.baidu.com/faq/api?title=jsapithree"
+                                href="https://lbs.baidu.com/faq/api?title=jsapithree"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="footer-link"
