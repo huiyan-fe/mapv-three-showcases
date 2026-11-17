@@ -1,6 +1,6 @@
 # MapV Three Showcases
 
-基于 JSAPI Three 的地图可视化展示案例集合，展示了各种 3D 可视化效果、地理信息展示和特效动画等。
+基于 3D地图 JSAPI（原 JSAPI Three）的地图可视化展示案例集合，展示了各种 3D 可视化效果、地理信息展示和特效动画等。
 
 官方网站：https://lbsyun.baidu.com/jsapithree/showcase/
 
@@ -53,7 +53,7 @@ npm run build
 ## 技术栈
 
 - React
-- JSAPI Three
+- 3D地图 JSAPI（原 JSAPI Three）
 - Vite
 - Ant Design
 - React Router

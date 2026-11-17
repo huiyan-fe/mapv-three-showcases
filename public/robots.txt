@@ -1,4 +1,4 @@
-# robots.txt for JSAPI Three 案例
+# robots.txt for 3D地图 JSAPI 案例
 # 允许所有搜索引擎爬取
 
 User-agent: *

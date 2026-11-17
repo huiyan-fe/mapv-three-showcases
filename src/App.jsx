@@ -98,7 +98,7 @@ const ShowcaseList = () => {
 
     // 设置首页title
     useEffect(() => {
-        document.title = 'JSAPI Three 案例 - 地图可视化展示案例集 | MapV Three';
+        document.title = '3D地图 JSAPI 案例 - 地图可视化展示案例集 | MapV Three';
     }, []);
 
     const filteredShowcases = useMemo(() => {
@@ -134,7 +134,7 @@ const ShowcaseList = () => {
             <div className="app-container">
                 <div className="sidebar">
                     <div style={{textAlign: 'center', margin: '12px 0 24px 0'}}>
-                        <Title level={3} style={{color: '#fff', margin: 0}}>JSAPI Three 案例</Title>
+                        <Title level={3} style={{color: '#fff', margin: 0}}>3D地图 JSAPI 案例</Title>
                     </div>
                     <div className="search-container">
                         <Input

@@ -17,11 +17,11 @@ export const withSourceCode = WrappedComponent => {
             const currentShowcase = showcases.find(item => item.path === location.pathname);
             // 设置页面title
             if (currentShowcase) {
-                document.title = `${currentShowcase.title} - JSAPI Three 案例 | MapV Three`;
+                document.title = `${currentShowcase.title} - 3D地图 JSAPI 案例 | MapV Three`;
             }
             else {
                 // 如果没有找到对应的showcase，使用组件名称
-                document.title = `${WrappedComponent.name} - JSAPI Three 案例 | MapV Three`;
+                document.title = `${WrappedComponent.name} - 3D地图 JSAPI 案例 | MapV Three`;
             }
 
             // 构建GitHub链接
